@@ -1,0 +1,58 @@
+.nav{
+    float: left;
+    width: 100%;
+    // background-color: #98DAD9;
+    background:linear-gradient(rgb(221, 213, 213),whitesmoke)
+    
+}
+.navrow{
+    float: right;
+    width:50%;
+    
+    a{
+        text-decoration: none;
+        color:#2E424D;
+    
+    }
+}
+
+.wall{
+    //background-image: linear-gradient(#2E424D,#5B8291);
+  //  background-repeat: no-repeat;
+    width:100%;
+    height: 350px;
+   // background-color: #a7bcc7;
+}
+/* Use a media query to add a break point at 800px: */
+
+.wall .info{
+    float: right;
+    margin:40px 50px 0px 0px;
+    width: 40%;
+    
+    @media screen and (min-width: 800px) {
+        .wall{
+          width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+        }
+      }
+   // background-color: #009393;
+    border: 0 px inherit;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    h3{
+        font-size: larger;
+        font-weight: 800;
+        margin:25px 15px 15px 15px;
+    }
+    p{
+        text-indent: 100px;
+        text-align: justify;
+        margin:15px 15px 25px 15px;
+        font-stretch: narrower;
+        
+    }
+    p,h3{
+        letter-spacing: 2px;
+        line-height: 1.8;
+    }
+}

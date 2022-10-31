@@ -1,0 +1,125 @@
+
+<div class="mid">
+
+    <div class="middd" >
+        <h3> <mat-icon id="icon">extension</mat-icon> &nbsp; Studies</h3> <br/>
+        <mat-grid-list  class="grid" id="Skills" cols="1" rowHeight="{{skills.length}}:1">
+            
+            <mat-card class="card" *ngFor="let skill of skills,let i=index" [@skillset]="here? 'atStart':'atEnd'">
+                <mat-card-subtitle>skill{{i+1}}</mat-card-subtitle>
+
+                <mat-card-content class="content">
+                    <mat-progress-spinner mode="determinate" [value]=skill.percentage id="spinner">
+
+                    </mat-progress-spinner>
+                    <img src="{{skill.imagelink}}" id="image" />
+
+                </mat-card-content>
+                <mat-divider inset></mat-divider>
+                <mat-card-actions>
+                    <mat-card-title class="title">{{skill.name}}</mat-card-title>
+                </mat-card-actions>
+                <mat-card-footer>
+                    
+                </mat-card-footer>
+            </mat-card>
+            
+        </mat-grid-list>
+
+        
+
+        <div id="Work_Experience" >
+            <h3> <mat-icon id="icon">work</mat-icon> &nbsp; Work Experience</h3> <br/>
+            <dl *ngFor="let work of Experience" [@workExperience]="here? 'atStart':'atEnd'" class="workhistory"  >
+                <dt>
+                    <h4>{{work.role}}</h4>
+                </dt>
+                <dd><b>{{work.companyname}}</b></dd>
+                <dd>
+                    <ul *ngFor="let discription of work.discription,let i=index">
+                        <li>{{discription}}</li>
+                    </ul>
+                </dd>
+                <br/>
+            </dl> 
+            
+        </div> 
+
+        <div id="Studies" >
+            <h3> <mat-icon id="icon">school</mat-icon> &nbsp; Studies</h3> <br/>
+            <mat-grid-list  class="grid"  cols="1" rowHeight="{{Studies.length}}:1">
+                <mat-card class="studycard" *ngFor="let study of Studies,let i=index" [@skillset]="here? 'atStart':'atEnd'">
+                    
+                    <mat-card-title class="title">{{study.studied}}</mat-card-title>
+                    <mat-card-subtitle>{{study.field}}</mat-card-subtitle>
+                    <mat-divider inset></mat-divider>
+                    <br />
+                    <mat-card-content class="content">
+                            <p>{{study.duration}}</p>
+                            <p>{{study.place}}</p>
+                        
+    
+                    </mat-card-content>
+                    
+                    <mat-card-actions>
+                    </mat-card-actions>
+                    
+                    <mat-card-footer>
+                        
+                        <mat-progress-bar  class="progressbar" color="accent" mode="buffer" [value]=study.percentage
+                            ></mat-progress-bar>
+                        <p class="percentage">{{study.percentage}}%</p>
+                    </mat-card-footer>
+                </mat-card>
+                
+            </mat-grid-list>
+        </div>
+    </div>
+
+    <div id="Projects" class="projects">
+        <h3 ><mat-icon id="icon">art_track</mat-icon> Projects</h3>
+        <mat-card class="projectcard" *ngFor="let project of projects,let i=index" >
+            
+            <mat-card-title class="title">{{project.language}}</mat-card-title>
+            <br/>
+            <!-- <mat-card-subtitle>project sample - {{i+1}}</mat-card-subtitle> -->
+            <mat-card-content class="content">
+                <mat-chip-list >
+                    <mat-chip  *ngFor="let sample of project.samples">
+                        <a  [href]="sample.link" class="sample">
+                      <mat-icon class="icon">{{sample.icon}}</mat-icon>
+                     <span> {{sample.typename}}</span> 
+                    </a>
+                    </mat-chip>
+                    
+                  </mat-chip-list>
+                  
+
+
+            </mat-card-content>
+            
+
+        </mat-card>
+
+    </div>
+
+    <div id="Others" class="Others">
+        <mat-tab-group animationDuration="2000ms" mat-align-tabs="center"  class="tabgroup">
+            <span *ngFor="let other of others" >
+                <mat-tab [label]=other.name class="tab">
+                    
+                        <ul *ngFor="let content of other.contents">
+                           
+                            <b *ngIf="other.id!=2">{{content.course || content.language }}</b>
+                            <p *ngIf="other.id!=2">{{content.place||content.level}}</p>
+                            <li *ngIf="other.id==2">{{content}}</li>
+                       
+
+                        </ul>
+                    
+                </mat-tab>
+            </span>
+          </mat-tab-group>
+    </div>
+
+</div>

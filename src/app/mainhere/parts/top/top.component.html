@@ -1,0 +1,21 @@
+<div>
+    <mat-toolbar class="nav">
+        <mat-toolbar-row class="navrow">
+            <span class="navTitle" *ngFor="let menuTitle of menu"> 
+                <a href="#{{menuTitle}}" mat-button color="primary">{{changeText(menuTitle)}}</a>
+            </span> &nbsp;&nbsp;
+           
+        </mat-toolbar-row>
+
+    </mat-toolbar>
+    <!-- --> <div class="wall" (mousewheel)="toggle()" id="Introduction" >
+
+        <div class="info"  [@paraAnimate]="isSmall ? 'small' : 'big'">
+            <h3 >{{name}}</h3>
+
+            <p color="primary" > {{intro_paragraph}} </p>
+
+        </div>
+
+    </div> 
+</div>
