@@ -7,22 +7,6 @@
     width: 100%;
 }
 
-@media screen and (max-width: 600px) {
-    .card{      
-     #spinner{
-        position:absolute;
-        margin: 0px 0px 0px-5px;
-        padding: 0;
-        }
-    img{
-        position:relative;
-        width: 50px;
-        height: 50px;
-        margin:25px 0 25px 20px;
-    }
-    }
-}
-
 .grid{
     float: left;
     width: 96%;
@@ -60,6 +44,77 @@
     
 }
 }
+
+@media screen and (max-width: 764px) {
+    .grid{
+        float: left;
+        width: 96%;
+        height: 500px;
+        margin:0px 0px 0px 4%;
+   
+    .card{      
+     #spinner{
+        position:absolute;
+        margin: 0px 0px 0px -15px;
+        padding: 0;
+        }
+    img{
+        position:relative;
+        width: 50px;
+        height: 50px;
+        margin:25px 0 25px 10px;
+    }
+    }
+    }
+    .middd #Work_Experience{
+        float: left;
+        width: 100%;
+        margin-top: 20px;
+        .workhistory{
+            float: left;
+            margin: 1%;
+            width:96%;
+            padding: 1%;
+        }
+    }
+    .middd #Studies{
+        margin-top: 20px;
+        height: 400px;
+        h3{
+            font-size: 14px;
+        }
+        .studycard{
+            float: left;
+            width:23%;
+            margin: 1%;
+            height: 260px;
+            .title{
+                font-size: 18px;
+            }
+            .progressbar{
+                height: 1.5px;
+            }
+            .percentage{
+            margin: 2px 0 0 2px;
+            font-size: large;
+            font-weight: 800;
+            }
+            p{
+                text-overflow: clip;
+            }
+        }
+    }
+    .middd .Others{
+        padding-top: 30px;
+        .tabgroup{
+            float: left;
+            margin:0 5% 0 5%;
+            width: 90%;
+        }
+    }
+}
+
+
 
 #Work_Experience{
     float: left;

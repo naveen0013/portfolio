@@ -30,7 +30,8 @@ export class MidComponent implements OnInit {
     }, 1000);
      
   }
-
+ 
+  device=screen.width;
   here=true;
   
   toggle(){

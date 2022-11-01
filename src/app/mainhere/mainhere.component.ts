@@ -10,6 +10,9 @@ export class MainhereComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log(screen.width,window.innerWidth,window.outerWidth)
   }
+  
+  
 
 }

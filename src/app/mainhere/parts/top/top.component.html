@@ -1,19 +1,32 @@
-<div>
-    <mat-toolbar class="nav">
-        <mat-toolbar-row class="navrow">
-            <span class="navTitle" *ngFor="let menuTitle of menu"> 
+<div class="top" (window:resize)="onResize()">
+    <span *ngIf="here>765 ; then thenBlock ; else elseBlock" ></span>
+    <ng-template #thenBlock>
+    <mat-toolbar class="nav" >
+        <mat-toolbar-row class="navrow" >
+            <span class="navTitle" *ngFor="let menuTitle of navmenu"> 
                 <a href="#{{menuTitle}}" mat-button color="primary">{{changeText(menuTitle)}}</a>
             </span> &nbsp;&nbsp;
            
         </mat-toolbar-row>
-
     </mat-toolbar>
+</ng-template>
+    <ng-template #elseBlock class="else">
+    <button mat-button [matMenuTriggerFor]="menu" (click)="onClickMenu()" >Menu</button>
+            <mat-menu class="navrow" #menu="matMenu"   >
+                <span *ngFor="let menuTitle of navmenu">
+                <a mat-menu-item href="#{{menuTitle}}">{{changeText(menuTitle)}}</a>
+                
+                </span>
+            </mat-menu>
+
+    </ng-template>
+   
     <!-- --> <div class="wall" (mousewheel)="toggle()" id="Introduction" >
 
-        <div class="info"  [@paraAnimate]="isSmall ? 'small' : 'big'">
+        <div class="info"  >
             <h3 >{{name}}</h3>
 
-            <p color="primary" > {{intro_paragraph}} </p>
+            <p color="primary" [@paraAnimate]="isSmall ? 'small' : 'big'" > {{intro_paragraph}} </p>
 
         </div>
 

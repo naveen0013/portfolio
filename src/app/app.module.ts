@@ -19,7 +19,7 @@ import { MatIconModule } from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import { MatChipsModule  } from '@angular/material/chips';
 import { MatTabsModule } from '@angular/material/tabs';
-
+import { MatMenuModule } from '@angular/material/menu';
 
 @NgModule({
   declarations: [
@@ -42,7 +42,8 @@ import { MatTabsModule } from '@angular/material/tabs';
     MatGridListModule,
     MatIconModule,
     MatChipsModule,
-    MatTabsModule
+    MatTabsModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent,MainhereComponent]

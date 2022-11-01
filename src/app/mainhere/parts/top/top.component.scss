@@ -1,3 +1,8 @@
+.else{
+    float: left;
+    width: 100%;
+    background:linear-gradient(rgb(221, 213, 213),whitesmoke)
+}
 .nav{
     float: left;
     width: 100%;
@@ -6,9 +11,8 @@
     
 }
 .navrow{
-    float: right;
     width:50%;
-    
+   margin-right: 50%; 
     a{
         text-decoration: none;
         color:#2E424D;
@@ -19,8 +23,9 @@
 .wall{
     //background-image: linear-gradient(#2E424D,#5B8291);
   //  background-repeat: no-repeat;
+  float: left;
     width:100%;
-    height: 350px;
+    height: auto;
    // background-color: #a7bcc7;
 }
 /* Use a media query to add a break point at 800px: */
@@ -29,12 +34,7 @@
     float: right;
     margin:40px 50px 0px 0px;
     width: 40%;
-    
-    @media screen and (min-width: 800px) {
-        .wall{
-          width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
-        }
-      }
+   
    // background-color: #009393;
     border: 0 px inherit;
     border-radius: 20px;
@@ -56,3 +56,14 @@
         line-height: 1.8;
     }
 }
+
+
+@media screen and (max-width: 600px) {
+    .wall .info{
+        float: left;
+        width: 100%;
+        margin:0%;
+        
+    }
+  }
+

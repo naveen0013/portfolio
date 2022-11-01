@@ -2,7 +2,7 @@
 <div class="mid">
 
     <div class="middd" >
-        <h3> <mat-icon id="icon">extension</mat-icon> &nbsp; Studies</h3> <br/>
+        <h3> <mat-icon id="icon">extension</mat-icon> &nbsp; Skills</h3> <br/>
         <mat-grid-list  class="grid" id="Skills" cols="1" rowHeight="{{skills.length}}:1">
             
             <mat-card class="card" *ngFor="let skill of skills,let i=index" [@skillset]="here? 'atStart':'atEnd'">
@@ -60,10 +60,6 @@
                         
     
                     </mat-card-content>
-                    
-                    <mat-card-actions>
-                    </mat-card-actions>
-                    
                     <mat-card-footer>
                         
                         <mat-progress-bar  class="progressbar" color="accent" mode="buffer" [value]=study.percentage
